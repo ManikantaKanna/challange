@@ -1,0 +1,69 @@
+1)method : GET ,
+URL : localhost:8080/hotel/gethotels?search=newtest,
+RESPONSE : [
+    {
+        "id": 1,
+        "name": "newtest",
+        "rating": 0,
+        "comments": null,
+        "locationId": 0,
+        "amenetyId": null,
+        "availableRooms": 6,
+        "adress": null
+    }
+]
+
+2)method : Post ,
+URL : localhost:8080/hotel/addhotel
+REQUEST BODY : {
+	"id":30,
+	"name": "newtest",
+	"adress":"1064  Southside Lane,Los Angeles,CA.",
+	"locationId":1,
+	"availableRooms":200,
+	"amenetyId":[1,2,3]
+}
+RESPONSE : success
+
+method : Post ,
+URL : localhost:8080/hotel/addComment
+REQUEST BODY : {
+	"hotelId":1,
+	"comment":"good one",
+	"user":{
+		"id":1
+	},
+	"rating":5
+}
+RESPONSE : success
+
+
+
+method : Post ,
+URL : localhost:8080/user/addUser
+REQUEST BODY : {
+	"gender":"male",
+	"id":2,
+	"city":"nizamabad",
+	"name":"alore",
+	"password":"alore222"
+}
+RESPONSE : success
+
+method : Post ,
+URL : localhost:8080/user/updateUser
+REQUEST BODY : {
+	"id":2,
+	"name":"jon",
+	"password":"123455"
+}
+RESPONSE : success
+
+
+
+method : Post ,
+URL : localhost:8080/user/deleteUser
+REQUEST BODY : {
+	"id":2,
+}
+RESPONSE : success
